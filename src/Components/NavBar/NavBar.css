@@ -1,0 +1,31 @@
+ul.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 25px;
+    width: 25%;
+}
+
+.nav-item {
+    list-style: none;
+    width: 100%;
+}
+
+.nav-link {
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: var( --main-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    background-color: #ccc;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.nav-link.active {
+    background-color: var(--sub-bg);
+}
