@@ -1,0 +1,23 @@
+.product_grid-filter {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product_grid-filter input{
+    border: 1px solid var(--sub-bg);
+    width: 100%;
+    max-width: 700px;
+    flex: 1;
+    border-radius: 4px;
+    height: 40px;
+    padding-left: 25px;
+    margin-right: 15px;
+}
+.product_grid-filter select {
+    border: 1px solid var(--sub-bg);
+    border-radius: 4px;
+    height: 40px;
+    padding-right:25px;
+}

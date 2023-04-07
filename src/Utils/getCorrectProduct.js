@@ -1,3 +1,8 @@
 export const productFilter = (arr, cate) => {
-    return arr.filter(el => el.category === cate);
+    let result = arr.filter(el => el.category === cate);
+    if (result.length > 0) {
+        return result
+    } else {
+        return arr
+    }
 }

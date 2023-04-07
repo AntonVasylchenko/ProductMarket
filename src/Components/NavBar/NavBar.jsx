@@ -12,7 +12,7 @@ const NavBar = ({ categories }) => {
     return (
         <ul className='nav-list'>
             <li className='nav-item'>
-                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/all">All</NavLink>
+                <NavLink className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} to="/cart">Cart</NavLink>
             </li>
             {lis}
         </ul>

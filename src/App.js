@@ -9,24 +9,36 @@ import NavBar from "./Components/NavBar/NavBar";
 import { Route, Routes } from "react-router-dom";
 import { productFilter } from "./Utils/getCorrectProduct";
 import Loader from "./UI/Loader/Loader";
-
-
-
+import CardGrid from "./Components/CardGrid/CardGrid";
 
 const App = () => {
   const [product, setProduct] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [cart, setCart] = useState([]);
 
   const [fetching, load, error] = useFetching(async () => {
     const response = await MarketServise.getMarket();
     setProduct(response.data.products);
-    setCategories(getCategories(response.data.products))
-    console.log(load);
+    setCategories([...categories, "all", ...getCategories(response.data.products)])
   });
+
+  const addToCart = (id) => {
+    let item = product.filter(el => el.id === id);
+    for (let e of item) {
+      setCart([...cart, e])
+    }
+  }
+
 
 
   let routes = categories.map(el => {
-    return <Route key={el} path={`/${el}`} element={<ProductGrid products={productFilter(product, el)} />}></Route>
+    return <Route
+      key={el}
+      path={`/${el}`}
+      element={<ProductGrid addToCart={addToCart}
+        products={productFilter(product, el)}
+      />}>
+    </Route>
 
   })
 
@@ -39,7 +51,7 @@ const App = () => {
       <>
         <NavBar categories={categories} />
         <Routes>
-          <Route path="/all" element={<ProductGrid products={product} />}></Route>
+          <Route path="/cart" element={<CardGrid product={cart} />}></Route>
           {routes}
         </Routes>
       </>

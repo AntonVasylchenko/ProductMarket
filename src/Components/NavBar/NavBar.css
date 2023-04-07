@@ -24,8 +24,15 @@ ul.nav-list {
     background-color: #ccc;
     padding: 5px;
     text-transform: uppercase;
+    word-break: break-all;
 }
 
 .nav-link.active {
     background-color: var(--sub-bg);
+}
+
+@media(max-width: 768px) {
+    .nav-link {
+        font-size: 14px;
+    }
 }

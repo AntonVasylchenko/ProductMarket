@@ -1,0 +1,11 @@
+.button {
+    width: 100%;
+    height: fit-content;
+    box-sizing: content-box;
+    padding: 10px;
+    border: 1px solid #fff;
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+    outline: none;
+}

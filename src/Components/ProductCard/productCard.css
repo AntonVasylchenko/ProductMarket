@@ -83,3 +83,20 @@
     font-weight: 600;
     flex: 1;
 }
+.goToCart {
+    color: var(--sub-color);
+    text-decoration: underline;
+}
+
+@media(max-width: 1140px) {
+    .productCard {
+        max-width: calc(100% / 2  - 40px * 1 / 2);
+        width: calc(100% / 2  - 40px * 1 / 2);
+    }
+}
+@media(max-width: 768px) {
+    .productCard {
+        max-width: 100%;
+        width: 100%;
+    }
+}

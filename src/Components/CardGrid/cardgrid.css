@@ -1,0 +1,114 @@
+/* .cart-item {
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    column-gap: 40px;
+    row-gap: 40px;
+    width: 75%;
+} */
+.cart-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 5px;
+    border: 1px solid #fff;
+    overflow: hidden;
+    max-width: calc(100% / 3 - 40px * 2 / 3);
+    width: calc(100% / 3 - 40px * 2 / 3);
+}
+.car-item-img {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+.car-item-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.car-item-imgs {
+    padding: 0 10px;
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.car-item-imgs img {
+    height: 100px;
+    max-width: calc(100% / 3  - 10px * 2 / 3);
+    width: calc(100% / 3  - 10px * 2 / 3);
+}
+.car-item-info {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-quantity {
+    margin: 15px 0;
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+.cart-total {
+    padding: 0 10px;
+}
+
+.cart-quantity >* {
+    height: 40px;
+}
+.cart-quantity button {
+    padding: 0;
+}
+
+.product_grid_nav {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.product_grid_nav >*:not(:last-child) {
+    margin-right: 25px;
+}
+.product_grid_nav button {
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--sub-bg);
+    color: var(--sub-color);
+}
+
+.modalBody{
+    text-align: center;
+}
+
+h1 a {
+    color: var(--main-color);
+    margin-left: 15px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+@media (max-width: 1140px) {
+    .cart-item {
+        max-width: calc(100% / 2 - 40px * 1 / 2);
+        width: calc(100% / 2 - 40px * 1 / 2);
+    }
+}
+@media (max-width: 768px) {
+    .cart-item {
+        max-width: 100%;
+        width: 100%;
+    }
+}
