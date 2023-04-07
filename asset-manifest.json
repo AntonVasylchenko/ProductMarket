@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ProductMarket/static/css/main.de418c91.css",
+    "main.js": "/ProductMarket/static/js/main.819657f5.js",
+    "index.html": "/ProductMarket/index.html",
+    "main.de418c91.css.map": "/ProductMarket/static/css/main.de418c91.css.map",
+    "main.819657f5.js.map": "/ProductMarket/static/js/main.819657f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de418c91.css",
+    "static/js/main.819657f5.js"
+  ]
+}
